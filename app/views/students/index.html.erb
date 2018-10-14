@@ -1,5 +1,16 @@
-<h1><%=@students.each do|student|
+<!-- <h1><%=@students.each do|student|
 
   student.to_s
 
-end %></h1>
+end %></h1> -->
+
+
+<!-- The above passed the tests, but resulted in a rendering of each student instance in its entirety.
+
+The below code is copied from the solution branch. The use of the greater than percent sign without the equals sign prevents the rendering of those lines, while the use of the equals sign permits it will be displayed. -->
+
+<div>
+  <% @students.each do |student| %>
+    <div><%= student.to_s %></div>
+  <% end %>
+</div>
